@@ -822,8 +822,8 @@ class Red(
         channel = message.channel
         guild = message.guild
 
-        if message.author.bot:
-            return False
+        #if message.author.bot:
+            #return False
 
         # We do not consider messages with PartialMessageable channel as eligible.
         # See `process_commands()` for our handling of it.
