@@ -1610,7 +1610,7 @@ class Red(
         messages,  without the overhead of additional get_context calls
         per cog.
         """
-        if not message.author.bot:
+        #if not message.author.bot:
             ctx = await self.get_context(message)
 
             # The licenseinfo command must always be available, even in a slash only bot.
@@ -1640,8 +1640,8 @@ class Red(
                 )
             else:
                 await self.invoke(ctx)
-        else:
-            ctx = None
+        #else:
+            #ctx = None
 
         if ctx is None or ctx.valid is False:
             self.dispatch("message_without_command", message)
